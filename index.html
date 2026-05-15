@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Travel Explorer — curated city guides, travel tools, weather, and safety notes. We went, so you know where to go." />
+  <title>Travel Explorer — We went, so you know where to go.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a href="#home" class="nav__brand">
+        <span class="nav__mark">TE</span>
+        <span class="nav__name">Travel Explorer</span>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav__toggle" hidden />
+      <label for="nav-toggle" class="nav__burger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#guides">Guides</a>
+        <a href="#cities">Cities</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#tools">Tools</a>
+        <a href="#weather">Weather</a>
+        <a href="#safety">Safety</a>
+        <a href="#enquiry">Enquiry</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="home" class="hero">
+    <div class="hero__media" aria-hidden="true"></div>
+    <div class="hero__overlay" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <p class="eyebrow eyebrow--light">Issue 014 · Asia Pacific</p>
+      <h1 class="hero__title">We went, so you know<br/>where to go.</h1>
+      <p class="hero__lede">
+        Curated travel guides with real prices, realistic itineraries, airport tips,
+        safety notes, weather insights, and local recommendations — from people who
+        actually showed up.
+      </p>
+      <div class="hero__ctas">
+        <a href="#cities" class="btn btn--solid">Read Latest Guide</a>
+        <a href="#enquiry" class="btn btn--ghost btn--ghost-light">Send Enquiry</a>
+      </div>
+    </div>
+
+    <!-- Featured card overlap -->
+    <article class="hero__featured" id="featured-card">
+      <div class="hero__featured-img" aria-hidden="true"></div>
+      <div class="hero__featured-body">
+        <p class="eyebrow">Featured Guide</p>
+        <h3>Tokyo, Japan</h3>
+        <p class="muted">Neon-lit alleys, omakase counters, and a metro that hums like clockwork. Our 72-hour edit of the only city that runs on perfection.</p>
+        <button class="link-arrow" data-open-city="tokyo" type="button">Open the guide →</button>
+      </div>
+    </article>
+  </section>
+
+  <!-- ===================== GUIDES INTRO ===================== -->
+  <section id="guides" class="section section--intro">
+    <div class="container container--narrow">
+      <p class="eyebrow">The Editorial</p>
+      <h2 class="section__title">Travel notes from people who actually went.</h2>
+      <p class="section__lede">
+        Every guide on this page was walked, eaten, and second-guessed in person.
+        We list what we'd do again, what we'd skip, and the prices we actually paid —
+        in Singapore dollars, with no affiliate fluff.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== CITIES ===================== -->
+  <section id="cities" class="section">
+    <div class="container">
+      <div class="section__header">
+        <div>
+          <p class="eyebrow">The Cities</p>
+          <h2 class="section__title">Twelve destinations, fully walked.</h2>
+        </div>
+        <p class="section__aside">Filter by budget, season, or flight time inside each guide.</p>
+      </div>
+
+      <div class="cities-grid" id="cities-grid">
+        <!-- City cards injected by script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== REVIEWS ===================== -->
+  <section id="reviews" class="section section--reviews">
+    <div class="container">
+      <div class="section__header">
+        <div>
+          <p class="eyebrow">Reader Reviews</p>
+          <h2 class="section__title">Travellers who actually went.</h2>
+        </div>
+        <p class="section__aside">Unsolicited notes from people who used these guides on the ground.</p>
+      </div>
+
+      <div class="reviews-grid">
+
+        <article class="review-card">
+          <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="review-card__quote">The Yanaka Ginza walk made the trip. We almost skipped it for another Shibuya day — so glad we didn't. Best ramen of the week was around the corner.</p>
+          <div class="review-card__author">
+            <span class="review-card__avatar" aria-hidden="true">PR</span>
+            <div>
+              <strong>Priya R.</strong>
+              <span class="muted">Tokyo · Mar 2026</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="review-card__quote">The Ubud + Uluwatu two-base split was exactly right. We were rained on for one afternoon and the warung list saved us. Already planning a return.</p>
+          <div class="review-card__author">
+            <span class="review-card__avatar" aria-hidden="true">MT</span>
+            <div>
+              <strong>Marcus T.</strong>
+              <span class="muted">Bali · Jul 2025</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="review-card__quote">Gwangjang Market tip alone was worth the whole guide. The mung-bean pancake. We went twice in three days. No regrets.</p>
+          <div class="review-card__author">
+            <span class="review-card__avatar" aria-hidden="true">HC</span>
+            <div>
+              <strong>Hui Lin C.</strong>
+              <span class="muted">Seoul · Oct 2025</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="review-card__quote">Adding Dragon's Back to a city trip felt counter-intuitive. It ended up being the most memorable afternoon. Bring more water than you think.</p>
+          <div class="review-card__author">
+            <span class="review-card__avatar" aria-hidden="true">JA</span>
+            <div>
+              <strong>Jamal A.</strong>
+              <span class="muted">Hong Kong · Nov 2025</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="review-card__quote">Egg coffee at Giang Café and the bun cha pick were both perfect. The "walk slow, don't stop" street-crossing advice may have saved my life.</p>
+          <div class="review-card__author">
+            <span class="review-card__avatar" aria-hidden="true">SN</span>
+            <div>
+              <strong>Sofia N.</strong>
+              <span class="muted">Hanoi · Feb 2026</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="review-card__quote">Bondi to Coogee walk + Surry Hills dinner was the perfect day. Booked Nomad two months out on the strength of this guide — best meal of the trip.</p>
+          <div class="review-card__author">
+            <span class="review-card__avatar" aria-hidden="true">EW</span>
+            <div>
+              <strong>Ethan W.</strong>
+              <span class="muted">Sydney · Apr 2026</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TOOLS ===================== -->
+  <section id="tools" class="section section--alt">
+    <div class="container">
+      <div class="section__header">
+        <div>
+          <p class="eyebrow">Travel Tools</p>
+          <h2 class="section__title">Plan it before you fly.</h2>
+        </div>
+        <p class="section__aside">Numbers, lists, and itineraries — all in your browser.</p>
+      </div>
+
+      <div class="tools-grid">
+
+        <!-- Budget Calculator -->
+        <article class="tool-card">
+          <p class="eyebrow">Tool 01</p>
+          <h3>Trip Budget Calculator</h3>
+          <p class="muted">Rough total cost in SGD based on travellers, days, and daily spend.</p>
+
+          <form id="budget-form" class="form-grid">
+            <label>
+              <span>Destination</span>
+              <select id="budget-destination"></select>
+            </label>
+            <label>
+              <span>Travellers</span>
+              <input type="number" id="budget-travellers" min="1" value="2" />
+            </label>
+            <label>
+              <span>Number of days</span>
+              <input type="number" id="budget-days" min="1" value="5" />
+            </label>
+            <label>
+              <span>Daily budget / person (SGD)</span>
+              <input type="number" id="budget-daily" min="0" value="200" />
+            </label>
+          </form>
+
+          <div class="result-box">
+            <span class="result-label">Estimated total</span>
+            <strong id="budget-output" class="result-value">S$2,000</strong>
+          </div>
+        </article>
+
+        <!-- Currency Converter -->
+        <article class="tool-card">
+          <p class="eyebrow">Tool 02</p>
+          <h3>Currency Converter</h3>
+          <p class="muted">SGD to your destination's currency. Rates are illustrative — see code for a live-rates stub.</p>
+
+          <form id="fx-form" class="form-grid">
+            <label>
+              <span>Amount (SGD)</span>
+              <input type="number" id="fx-amount" min="0" value="100" />
+            </label>
+            <label>
+              <span>Convert to</span>
+              <select id="fx-currency"></select>
+            </label>
+          </form>
+
+          <div class="result-box">
+            <span class="result-label">You'll get approximately</span>
+            <strong id="fx-output" class="result-value">—</strong>
+          </div>
+        </article>
+
+        <!-- Packing Checklist -->
+        <article class="tool-card tool-card--wide">
+          <p class="eyebrow">Tool 03</p>
+          <h3>Packing Checklist</h3>
+          <p class="muted">Five categories. Ticks persist in this browser.</p>
+
+          <div id="packing-list" class="packing-list"></div>
+          <button id="packing-reset" type="button" class="btn btn--ghost btn--small">Reset checklist</button>
+        </article>
+
+        <!-- Itinerary Planner -->
+        <article class="tool-card tool-card--wide">
+          <p class="eyebrow">Tool 04</p>
+          <h3>Itinerary Planner</h3>
+          <p class="muted">Add a day-by-day plan. Saved in your browser.</p>
+
+          <form id="itinerary-form" class="form-grid form-grid--itinerary">
+            <label>
+              <span>Day</span>
+              <input type="text" id="it-day" placeholder="Day 1" required />
+            </label>
+            <label>
+              <span>Time</span>
+              <input type="time" id="it-time" required />
+            </label>
+            <label class="form-grid__wide">
+              <span>Activity</span>
+              <input type="text" id="it-activity" placeholder="Senso-ji temple at sunrise" required />
+            </label>
+            <label class="form-grid__wide">
+              <span>Notes</span>
+              <input type="text" id="it-notes" placeholder="Bring a light jacket" />
+            </label>
+            <button type="submit" class="btn btn--solid">Add to itinerary</button>
+          </form>
+
+          <ul id="itinerary-list" class="itinerary-list"></ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WEATHER ===================== -->
+  <section id="weather" class="section">
+    <div class="container container--narrow">
+      <p class="eyebrow">Weather</p>
+      <h2 class="section__title">Will you need a jacket?</h2>
+      <p class="section__lede">Quick lookup powered by <a href="https://openweathermap.org/api" target="_blank" rel="noopener">OpenWeather</a>. Add your free API key in <code>script.js</code> to enable live results.</p>
+
+      <form id="weather-form" class="weather-form">
+        <input type="text" id="weather-city" placeholder="Try Tokyo, Bali, Sydney…" required />
+        <button type="submit" class="btn btn--solid">Check Weather</button>
+      </form>
+
+      <div id="weather-result" class="weather-result" hidden></div>
+    </div>
+  </section>
+
+  <!-- ===================== SAFETY ===================== -->
+  <section id="safety" class="section section--alt">
+    <div class="container">
+      <div class="section__header">
+        <div>
+          <p class="eyebrow">Stay Safe</p>
+          <h2 class="section__title">The five things we always check.</h2>
+        </div>
+        <p class="section__aside">General notes — always cross-check with your country's travel advisory.</p>
+      </div>
+
+      <div class="safety-grid">
+        <article class="safety-card">
+          <h4>General Precautions</h4>
+          <ul>
+            <li>Photo-scan your passport, insurance, and vaccination card — store in cloud + offline.</li>
+            <li>Carry a backup payment card on a separate person/bag.</li>
+            <li>Share your daily plan with someone back home.</li>
+            <li>Memorise your hotel address in the local language.</li>
+          </ul>
+        </article>
+
+        <article class="safety-card">
+          <h4>Scams to Avoid</h4>
+          <ul>
+            <li>"Closed temple" detours that funnel you into a gem shop.</li>
+            <li>Unmetered taxis at airports — book the official counter or app.</li>
+            <li>Free bracelets, friendship strings, or "tasting" plates at restaurants.</li>
+            <li>ATM skimmers — prefer machines inside bank branches.</li>
+          </ul>
+        </article>
+
+        <article class="safety-card">
+          <h4>Emergency Numbers</h4>
+          <ul>
+            <li>Singapore — 999 police, 995 ambulance/fire</li>
+            <li>Japan — 110 police, 119 ambulance/fire</li>
+            <li>Thailand — 191 police, 1669 medical, 1155 tourist police</li>
+            <li>Indonesia — 110 police, 118 ambulance</li>
+            <li>Australia — 000 all emergencies</li>
+          </ul>
+        </article>
+
+        <article class="safety-card">
+          <h4>Health & Vaccinations</h4>
+          <ul>
+            <li>Check Hep A, Typhoid, Japanese Encephalitis for SEA trips.</li>
+            <li>Pack rehydration salts, paracetamol, antihistamine, and plasters.</li>
+            <li>Drink bottled or filtered water in BKK / Bali / Hanoi.</li>
+            <li>Travel insurance with medevac is non-negotiable.</li>
+          </ul>
+        </article>
+
+        <article class="safety-card">
+          <h4>Solo Travel Tips</h4>
+          <ul>
+            <li>Arrive in daylight wherever possible.</li>
+            <li>Book the first two nights — improvise later.</li>
+            <li>Choose well-lit, central neighbourhoods over cheaper outskirts.</li>
+            <li>Trust your gut. A skipped activity is cheaper than a bad night.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ENQUIRY ===================== -->
+  <section id="enquiry" class="section">
+    <div class="container container--narrow">
+      <p class="eyebrow">Talk to us</p>
+      <h2 class="section__title">Plan your next trip with us.</h2>
+      <p class="section__lede">Tell us where you're going and what you want out of it. We reply within two business days.</p>
+
+      <form id="enquiry-form" class="enquiry-form" novalidate>
+        <div class="form-grid form-grid--enquiry">
+          <label>
+            <span>Full name *</span>
+            <input type="text" name="fullName" required />
+          </label>
+          <label>
+            <span>Email *</span>
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            <span>Phone *</span>
+            <input type="tel" name="phone" required />
+          </label>
+          <label>
+            <span>Destination of interest *</span>
+            <select name="destination" id="enquiry-destination" required></select>
+          </label>
+          <label>
+            <span>Travel date *</span>
+            <input type="date" name="travelDate" required />
+          </label>
+          <label>
+            <span>Number of travellers *</span>
+            <input type="number" name="travellers" min="1" value="2" required />
+          </label>
+          <label class="form-grid__full">
+            <span>Message</span>
+            <textarea name="message" rows="4" placeholder="Tell us what you're after — itinerary style, must-do experiences, dietary needs…"></textarea>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn--solid btn--large">Send enquiry</button>
+        <p id="enquiry-status" class="form-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="enquiry-viewer">
+        <button type="button" id="enquiry-viewer-toggle" class="link-arrow">View saved enquiries ▾</button>
+        <div id="enquiry-viewer-panel" class="enquiry-viewer__panel" hidden>
+          <div class="enquiry-viewer__head">
+            <p class="muted">Stored locally in this browser (<code>localStorage</code>). Only you can see these.</p>
+            <button type="button" id="enquiry-clear" class="btn btn--ghost btn--small">Clear all</button>
+          </div>
+          <ul id="enquiry-viewer-list" class="enquiry-viewer__list"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <p class="nav__brand">
+          <span class="nav__mark">TE</span>
+          <span class="nav__name">Travel Explorer</span>
+        </p>
+        <p class="muted">We went, so you know where to go.</p>
+      </div>
+      <div class="footer__cols">
+        <div>
+          <p class="eyebrow">Sections</p>
+          <a href="#cities">Cities</a>
+          <a href="#tools">Tools</a>
+          <a href="#weather">Weather</a>
+          <a href="#safety">Safety</a>
+        </div>
+        <div>
+          <p class="eyebrow">Follow</p>
+          <a href="#">Instagram</a>
+          <a href="#">Substack</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__base">
+      <span class="muted">© <span id="footer-year"></span> Travel Explorer · Editorial only. Images from Unsplash.</span>
+    </div>
+  </footer>
+
+  <!-- ===================== GUIDE MODAL ===================== -->
+  <div id="guide-modal" class="modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__panel" role="document">
+      <button class="modal__close" type="button" data-close-modal aria-label="Close">×</button>
+      <div class="modal__hero">
+        <img id="modal-image" src="" alt="" />
+        <div class="modal__hero-text">
+          <p class="eyebrow eyebrow--light" id="modal-country"></p>
+          <h2 id="modal-title"></h2>
+        </div>
+      </div>
+      <div class="modal__body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Toast container -->
+  <div id="toast" class="toast" hidden></div>
+</body>
+</html>
