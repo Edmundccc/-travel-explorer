@@ -2,6 +2,8 @@
 
 A static single-page travel-guide site for 12 destinations across Asia-Pacific. Built with vanilla HTML, CSS, and JavaScript — no frameworks, no build step, no backend.
 
+![Travel Explorer homepage](screenshot.png)
+
 ## Features
 
 - Browse 12 city guides with 3-day itineraries, food picks, transport tips, cost breakdowns, safety notes, and photo spots
